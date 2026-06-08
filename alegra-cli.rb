@@ -5,21 +5,21 @@
 class AlegraCli < Formula
   desc "Command-line interface for the Alegra accounting API"
   homepage "https://github.com/jjuanrivvera/alegra-cli"
-  version "0.4.3"
+  version "0.4.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jjuanrivvera/alegra-cli/releases/download/v0.4.3/alegra-cli_0.4.3_darwin_amd64.tar.gz"
-      sha256 "f07ea4d2d8eaf14d94b7b0caa9c482552badcd5d729debc1a6cf451a68112ce6"
+      url "https://github.com/jjuanrivvera/alegra-cli/releases/download/v0.4.4/alegra-cli_0.4.4_darwin_amd64.tar.gz"
+      sha256 "8d7d4afb25e38d22a27b2ac985da2cc3958d913c77d466d1a7755133c99b3029"
 
       define_method(:install) do
         bin.install "alegra"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jjuanrivvera/alegra-cli/releases/download/v0.4.3/alegra-cli_0.4.3_darwin_arm64.tar.gz"
-      sha256 "0cb6f75b01026a0b1aa1287ce98165adb444e653db479e8eacb2e5122dab4e15"
+      url "https://github.com/jjuanrivvera/alegra-cli/releases/download/v0.4.4/alegra-cli_0.4.4_darwin_arm64.tar.gz"
+      sha256 "f5422bd031fbf04cb6234330fcb2db6377a4695961f6c887f169152b41d83262"
 
       define_method(:install) do
         bin.install "alegra"
@@ -29,15 +29,15 @@ class AlegraCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jjuanrivvera/alegra-cli/releases/download/v0.4.3/alegra-cli_0.4.3_linux_amd64.tar.gz"
-      sha256 "57cba9115600f8eac833b3addc71626ed3f93aff0c31bc559ca54522dfd31537"
+      url "https://github.com/jjuanrivvera/alegra-cli/releases/download/v0.4.4/alegra-cli_0.4.4_linux_amd64.tar.gz"
+      sha256 "ce0becefcc911a1a97865a2ee67f7d5a6dcbe941840cf9d29a5aa959f0ff7297"
       define_method(:install) do
         bin.install "alegra"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jjuanrivvera/alegra-cli/releases/download/v0.4.3/alegra-cli_0.4.3_linux_arm64.tar.gz"
-      sha256 "516afcab9619cd24af4f246ae5cf6dd404569b4d8700a5052a4b15c96806ddd8"
+      url "https://github.com/jjuanrivvera/alegra-cli/releases/download/v0.4.4/alegra-cli_0.4.4_linux_arm64.tar.gz"
+      sha256 "01ccb7982c88b23e2a865354d7954733ea1cb341a5278cdbae47da4e7d614f80"
       define_method(:install) do
         bin.install "alegra"
       end
