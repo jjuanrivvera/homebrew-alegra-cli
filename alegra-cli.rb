@@ -5,41 +5,53 @@
 class AlegraCli < Formula
   desc "Command-line interface for the Alegra accounting API"
   homepage "https://github.com/jjuanrivvera/alegra-cli"
-  version "0.4.4"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jjuanrivvera/alegra-cli/releases/download/v0.4.4/alegra-cli_0.4.4_darwin_amd64.tar.gz"
-      sha256 "8d7d4afb25e38d22a27b2ac985da2cc3958d913c77d466d1a7755133c99b3029"
+      url "https://github.com/jjuanrivvera/alegra-cli/releases/download/v0.5.0/alegra-cli_0.5.0_darwin_amd64.tar.gz"
+      sha256 "8f7c93440513ddf50374c12a1215da9c39796a20026ef4da08f70a38b6db4364"
 
       define_method(:install) do
         bin.install "alegra"
+        bash_completion.install "completions/alegra.bash" => "alegra"
+        zsh_completion.install "completions/alegra.zsh" => "_alegra"
+        fish_completion.install "completions/alegra.fish"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jjuanrivvera/alegra-cli/releases/download/v0.4.4/alegra-cli_0.4.4_darwin_arm64.tar.gz"
-      sha256 "f5422bd031fbf04cb6234330fcb2db6377a4695961f6c887f169152b41d83262"
+      url "https://github.com/jjuanrivvera/alegra-cli/releases/download/v0.5.0/alegra-cli_0.5.0_darwin_arm64.tar.gz"
+      sha256 "8bd1f734fcc1b676fcdbc4eb1b285dbae087df49851fcaf5f08c7cf12da864c6"
 
       define_method(:install) do
         bin.install "alegra"
+        bash_completion.install "completions/alegra.bash" => "alegra"
+        zsh_completion.install "completions/alegra.zsh" => "_alegra"
+        fish_completion.install "completions/alegra.fish"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jjuanrivvera/alegra-cli/releases/download/v0.4.4/alegra-cli_0.4.4_linux_amd64.tar.gz"
-      sha256 "ce0becefcc911a1a97865a2ee67f7d5a6dcbe941840cf9d29a5aa959f0ff7297"
+      url "https://github.com/jjuanrivvera/alegra-cli/releases/download/v0.5.0/alegra-cli_0.5.0_linux_amd64.tar.gz"
+      sha256 "579921bb8171c254bc1975b2db2bb8df202135b3ab266956f41e507114a1b4a3"
       define_method(:install) do
         bin.install "alegra"
+        bash_completion.install "completions/alegra.bash" => "alegra"
+        zsh_completion.install "completions/alegra.zsh" => "_alegra"
+        fish_completion.install "completions/alegra.fish"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jjuanrivvera/alegra-cli/releases/download/v0.4.4/alegra-cli_0.4.4_linux_arm64.tar.gz"
-      sha256 "01ccb7982c88b23e2a865354d7954733ea1cb341a5278cdbae47da4e7d614f80"
+      url "https://github.com/jjuanrivvera/alegra-cli/releases/download/v0.5.0/alegra-cli_0.5.0_linux_arm64.tar.gz"
+      sha256 "c147c8d47229146a956f918bd183bb44abfc8d7cc71bbabb87fe0f22a7e5957f"
       define_method(:install) do
         bin.install "alegra"
+        bash_completion.install "completions/alegra.bash" => "alegra"
+        zsh_completion.install "completions/alegra.zsh" => "_alegra"
+        fish_completion.install "completions/alegra.fish"
       end
     end
   end
