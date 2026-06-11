@@ -5,13 +5,13 @@
 class AlegraCli < Formula
   desc "Command-line interface for the Alegra accounting API"
   homepage "https://github.com/jjuanrivvera/alegra-cli"
-  version "0.9.0"
+  version "0.9.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jjuanrivvera/alegra-cli/releases/download/v0.9.0/alegra-cli_0.9.0_darwin_amd64.tar.gz"
-      sha256 "d17eb22edf26058b4210284c6432ec58002f1ee81c12a6f226f2b004ddd9ebe6"
+      url "https://github.com/jjuanrivvera/alegra-cli/releases/download/v0.9.1/alegra-cli_0.9.1_darwin_amd64.tar.gz"
+      sha256 "1530953a2ed73fe9cdc9cda59535c49729fd9112de5cc3aa96e765d3fb176730"
 
       define_method(:install) do
         bin.install "alegra"
@@ -21,8 +21,8 @@ class AlegraCli < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jjuanrivvera/alegra-cli/releases/download/v0.9.0/alegra-cli_0.9.0_darwin_arm64.tar.gz"
-      sha256 "cbe3e088b7d8f0fea1f2172beae9d5fa6ceb65129b91d9144c1599717c87db7d"
+      url "https://github.com/jjuanrivvera/alegra-cli/releases/download/v0.9.1/alegra-cli_0.9.1_darwin_arm64.tar.gz"
+      sha256 "d4497366408851536c11917d2072e02000a5860d4a297d5f4a9c3ed6e579018e"
 
       define_method(:install) do
         bin.install "alegra"
@@ -35,8 +35,8 @@ class AlegraCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jjuanrivvera/alegra-cli/releases/download/v0.9.0/alegra-cli_0.9.0_linux_amd64.tar.gz"
-      sha256 "63337b787127743cff265c695b0cf69ad23a8e4db76935f35624f92fc6c6a9f1"
+      url "https://github.com/jjuanrivvera/alegra-cli/releases/download/v0.9.1/alegra-cli_0.9.1_linux_amd64.tar.gz"
+      sha256 "6316bafd479d1265d132b1f0737e6849cbf2eb1b94a9b5ac82a557e74d01233c"
       define_method(:install) do
         bin.install "alegra"
         bash_completion.install "completions/alegra.bash" => "alegra"
@@ -45,8 +45,8 @@ class AlegraCli < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jjuanrivvera/alegra-cli/releases/download/v0.9.0/alegra-cli_0.9.0_linux_arm64.tar.gz"
-      sha256 "c03d030e681174d12fad927580ccc5f70b7b294a9dd764ee6369dd9d25a3c833"
+      url "https://github.com/jjuanrivvera/alegra-cli/releases/download/v0.9.1/alegra-cli_0.9.1_linux_arm64.tar.gz"
+      sha256 "ff978dd72e92ff19fff3ca4cd1952f385263b2a91f786d04546e97c6964a1d2c"
       define_method(:install) do
         bin.install "alegra"
         bash_completion.install "completions/alegra.bash" => "alegra"
